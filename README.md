@@ -33,26 +33,39 @@ Polymorphism:
 Classes:
  It is a blueprint that describes the state and behavior that the objects of the class all share. A class can be used to create many objects. Objects created at runtime from a class are called instances of that particular class.
 
-Example of a user class
+Example of a user class:
 
-class User
-  attr_accessor :name, :email
-  def initialize(name, email)
-    @name = name
-    @email = email
-  end
-  def run
-    puts "Hello, how is everything?"
-  end
-  def self.identify_yourself
-    puts "It's a class method"
-  end
-end
-user = User.new("masud", "masud@gmail.com")
-user.run
-User.identify_youself 
+class Teacher
+    attr_accessor :first_name, :last_name, :username, :email, :password
+
+    def initialize(firstname, lastname, username, email, password)
+        @first_name = firstname
+        @last_name = lastname
+        @username = username
+        @email =email
+        @password = password
+
+    end 
 
 
+    def to_s
+        "First name: #{@first_name}, Last name: #{@last_name}, Username: #{@username}, Email address: #{@email}, Password: #{@password}"
+    end 
+
+end 
+
+masud = Teacher.new("Masudur", "Chawdhury", "masud", 
+                   "masud@gmail.com", "admin1")
+babu = Teacher.new("Babul D", "Nokrek", "babu", 
+                   "babu@gmail.com", "admin2")
+
+
+puts masud
+puts babu 
+
+puts "Masud is altered!"
+masud.last_name = babu.last_name
+puts masud
 
 
 
