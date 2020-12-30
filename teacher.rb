@@ -1,3 +1,4 @@
+# OOP revisiting
 class Teacher
     attr_accessor :first_name, :last_name, :username, :email, :password
 
