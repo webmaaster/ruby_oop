@@ -22,8 +22,9 @@ class Fish < Pet
 
     end
     def speak
-        puts 'Many programmers cannot teach programming well'
         super 
+        puts 'Many programmers cannot teach programming well'
+        
     end 
 end 
 
